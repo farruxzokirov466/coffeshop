@@ -1,0 +1,201 @@
+body{
+	font-family: 'Poppins', sans-serif;
+	background: #ffc640;
+margin: 0px;
+        padding: 0px;
+}
+.menyu{
+	margin-top: 10%;
+}
+.cont{
+	position: relative;
+	margin: 5% 10%;
+}
+.cont .box{
+	width: 31%;
+	position: relative;
+	height: 500px;
+	background:#ffc640;
+	text-align: left;
+	border: 1px solid  #2b180c;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	margin:1% 1%;
+}
+.cont .box:before{
+	content: '';
+	position: absolute;
+	top:-2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	border-radius: 10px;
+	background: #fff ; 
+	z-index: -1;
+	transform: skew(2deg, -2deg );
+}
+.cont .box:nth-child(odd):before{
+	background: linear-gradient(315deg, #2b180c,#e64a19);
+}
+.cont .box:nth-child(even):before{
+	background: linear-gradient(315deg, #2b180c,#e64a19);
+}
+@keyframes rotar{
+ 0%{ 	
+	transform: skew(2deg, 0deg );
+ }
+ 50%{ 	
+	transform: skew(0deg, 2deg );
+ }
+ 100%{ 	
+	transform: skew(2deg, 0deg );
+ }
+}
+.content{
+	position: relative;
+	padding: 20px; 
+}
+.box .content img{
+	width: 370px;
+	position: absolute;
+	top: 30px;
+	left: 25px;
+	margin:0;
+	padding: 0;
+	opacity: 0.5;
+	transition: 0.5s;
+	animation: rotar 1s infinite linear;
+  transform-style: preserve-3d;
+}
+.box:hover .content img{ 	
+	top: -20px;
+	opacity: 0.9;
+	animation: none;
+}
+.box .content .price_p{
+    margin: 0 10px;
+    padding: 0;
+    font-size: 24px;
+    font-size: 500;
+    color:  #2b180c;
+    position: inherit;
+    margin-top: 250px;
+    font-family: "Myriad Pro";
+}
+.box .content .price_c{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color:  #2b180c;
+    font-family: cursive;
+    position: inherit;
+}
+@media (max-width: 1300px){
+.cont .box{
+  width: 40%;
+}
+}
+@media (max-width: 1050px){
+	.cont{
+		margin: 5% 3%;
+	}
+.cont .box{
+  width: 42%;
+}
+}
+@media (max-width: 940px){
+	.cont{
+		margin: 5% 1%;
+	}
+.cont .box{
+  width: 48%;
+}
+}
+@media (max-width: 840px){
+	.cont{
+		margin: 5% 25%;
+	}
+.cont .box{
+  width: 100%;
+
+}
+}
+@media (max-width: 700px){
+	.cont{
+		margin: 5% 20%;
+	}
+.cont .box{
+  width: 100%;
+
+}
+}
+@media (max-width: 600px){
+	.cont{
+		margin: 5% 15%;
+	}
+.cont .box{
+  width: 100%;
+
+}
+}
+
+
+
+/*Button uchun*/
+
+.box .content input{
+	position: absolute;
+	margin: 0px;
+	font-size: 16px;
+	padding: 4px 20px;
+	margin-top: 15px;
+	border: none;
+	display: inline-block;
+	transition: 0.5s;
+	transform: translateY(-40px);
+	opacity: 0;
+	text-align: center;
+	background: linear-gradient(90deg,#ffc640,#e64a19,#ffc640);
+	background-size: 300%;
+	border-radius: 10px;
+	animation: animate 4s linear infinite;
+}
+.box:hover .content input{
+	transform: translateY(0);
+	opacity: 1;
+	visibility: visible; 
+}
+.box .content input:focus{
+	outline:none;
+}
+@keyframes animate{
+	0%{
+		background-position: 0%;
+	}
+	100%{
+		background-position: 300%;
+	}
+}
+.box .content input:hover{   
+	animation: btn 3s linear infinite;
+}
+@keyframes btn{
+	0%{
+		filter: blur(0px);
+		background-position: 0%;
+	}
+	50%{
+		filter: blur(2px);
+		background-position: 300%;
+	}
+	100%{
+        filter: blur(0px);
+	}
+}
+
+svg{
+	margin: 0 5% 5% 5%;
+}
+.footer_col_2{
+	text-align: center;
+}
